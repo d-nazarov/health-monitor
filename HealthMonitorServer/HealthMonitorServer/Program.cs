@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace HealthMonitorServer
 {
@@ -10,6 +7,9 @@ namespace HealthMonitorServer
     {
         static void Main(string[] args)
         {
+            var server = new HealthMonitorServer(ConfigurationSettings.AppSettings["Host"], ConfigurationSettings.AppSettings["Port"]);
+
+            Console.ReadLine();
         }
     }
 }
