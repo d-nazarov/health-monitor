@@ -1,5 +1,7 @@
 ﻿using Fleck;
+using HealthMonitorServer.Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HealthMonitorServer
 {
@@ -31,6 +33,20 @@ namespace HealthMonitorServer
                     }
                 };
             });
+
+            var processService = new DataProcessingService();
+            processService.NewBroadcastMessage += ProcessService_NewBroadcastMessage;
+        }
+
+        private void ProcessService_NewBroadcastMessage(object sender, string e)
+        {
+            lock (sync)
+            {
+                Parallel.ForEach(connections, socket =>
+                {
+                    socket.Send(e);
+                });
+            }
         }
     }
 }
