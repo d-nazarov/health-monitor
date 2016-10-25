@@ -12,7 +12,7 @@ namespace HealthMonitorServer.Services
         #region Fields
 
         private int interval;
-        private int highloadTreshold = 80;
+        private int highloadTreshold;
         private readonly PerformanceCounter cpuUsageCounter;
         private Timer timer;
 

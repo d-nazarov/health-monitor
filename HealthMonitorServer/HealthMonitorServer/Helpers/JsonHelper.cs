@@ -13,6 +13,7 @@ namespace HealthMonitorServer.Helpers
             return JsonConvert.SerializeObject(new
             {
                 messageType = messageType.ToString(),
+                message = messageType.GetDescription(),
                 data
             }, Formatting.Indented, jsonSerializerSettings);
         }

@@ -1,0 +1,25 @@
+﻿using HealthMonitorServer.Enums;
+using System.ComponentModel;
+using System.Reflection;
+
+namespace HealthMonitorServer.Helpers
+{
+    public static class EnumHelper
+    {
+        public static string GetDescription(this MessageTypes value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+
+            DescriptionAttribute[] attributes =
+                (DescriptionAttribute[])fi.GetCustomAttributes(
+                typeof(DescriptionAttribute),
+                false);
+
+            if (attributes != null &&
+                attributes.Length > 0)
+                return attributes[0].Description;
+            else
+                return value.ToString();
+        }
+    }
+}

@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Enums\MessageTypes.cs" />
     <Compile Include="HealthMonitorServer.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Models\MonitoringServiceMessage.cs" />
     <Compile Include="Models\ProcessInformation.cs" />
