@@ -1,10 +1,13 @@
 # health-monitor
 
 ## Health monitor server description
+
 Health Monitor measures values and send notifications to all connected clients.
+
 Server can be reached via WebSocket connection. Current location is *ws://127.0.0.1:8181*
+
 ---
-### Server notificaion message structure
+### Server notification message structure
 
 Server provides notifications in json format
 
