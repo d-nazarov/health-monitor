@@ -3,6 +3,7 @@
     public enum MessageTypes
     {
         ProcessesInformation,
-        CpuHighload
+        CpuHighload,
+        LowMemory
     }
 }
