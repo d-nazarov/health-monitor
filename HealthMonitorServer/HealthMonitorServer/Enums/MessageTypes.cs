@@ -2,5 +2,6 @@
 {
     public enum MessageTypes
     {
+        ProcessesInformation
     }
 }

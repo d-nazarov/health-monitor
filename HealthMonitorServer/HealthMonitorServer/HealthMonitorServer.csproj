@@ -50,9 +50,11 @@
     <Compile Include="Enums\MessageTypes.cs" />
     <Compile Include="HealthMonitorServer.cs" />
     <Compile Include="Models\MonitoringServiceMessage.cs" />
+    <Compile Include="Models\ProcessInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Interfaces\INotificationService.cs" />
+    <Compile Include="Services\ProcessMonitoringService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
