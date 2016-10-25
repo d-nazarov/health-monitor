@@ -1,0 +1,25 @@
+<div class="text-center" style="margin: 20px">
+    <button *ngIf="!isConnected" (click)="connect()" class="btn btn-success btn-lg">Connect</button>
+    <button *ngIf="isConnected" (click)="disconnect()" class="btn btn-danger btn-lg">Disonnect</button>
+</div>
+
+<div *ngIf="processes" class="text-center col-md-8 col-md-offset-2">
+    <h2>Active Processes</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Process Id</th>
+                <th>Process Name</th>
+                <th>Memory Usage (byte)</th>
+                <th>Total Processor Time (ms)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let process of processes">
+                <td>{{process.id}}</td>
+                <td>{{process.name}}</td>
+                <td>{{process.memoryUsage}}</td>
+                <td>{{process.totalProcessorTime}}</td>
+            </tr>            
+    </table>
+</div>

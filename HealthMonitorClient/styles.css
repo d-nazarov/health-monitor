@@ -1,0 +1,9 @@
+.background {
+    background: url(img/background.jpeg); 
+    background-size: cover; 
+    padding: 70px 0
+}
+
+.title-text {
+    color: aliceblue;
+}
